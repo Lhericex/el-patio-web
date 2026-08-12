@@ -96,8 +96,15 @@
 
   @media (max-width: 880px){
     nav.links{display:none;}
-    .nav-toggle{display:block; background:none; border:none; color:var(--cream); font-size:1.5rem; line-height:1; cursor:pointer; padding:4px 2px;}
+    .nav-toggle{
+      display:flex; align-items:center; justify-content:center;
+      background:none; border:none; color:var(--cream); cursor:pointer; padding:4px;
+    }
   }
+  .nav-toggle svg{width:24px; height:24px;}
+  .nav-toggle .icon-x{display:none;}
+  .nav-toggle.is-open .icon-menu{display:none;}
+  .nav-toggle.is-open .icon-x{display:block;}
 
   /* ---------- mobile menu ---------- */
   .mobile-menu{
@@ -227,15 +234,17 @@
       var(--teal-950);
     border-top:1px solid var(--line); border-bottom:1px solid var(--line);
   }
-  .about-stack{max-width:760px;}
+  .about-stack{display:grid; grid-template-columns:1.3fr 1fr; gap:44px; align-items:center;}
+  @media (max-width:900px){ .about-stack{grid-template-columns:1fr;} }
   .about-intro .about-copy p{color:var(--cream-dim); font-size:1.08rem; line-height:1.8;}
   .about-copy strong{color:var(--cream);}
 
   .host-block{
-    margin-top:32px; display:flex; align-items:center; gap:26px;
-    background:var(--teal-800); border:1px solid var(--line); border-radius:22px; padding:24px 28px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:16px; text-align:left;
+    background:var(--teal-800); border:1px solid var(--line); border-radius:22px; padding:28px;
   }
-  @media (max-width:600px){ .host-block{flex-direction:column; text-align:center;} }
+  @media (max-width:900px){ .host-block{flex-direction:row; align-items:center; text-align:left;} }
+  @media (max-width:600px){ .host-block{flex-direction:column; align-items:center; text-align:center;} }
   .host-portrait{
     position:relative; width:110px; height:110px; flex-shrink:0; border-radius:50%; overflow:hidden;
     border:3px solid var(--orange); box-shadow:0 14px 28px rgba(0,0,0,0.35);
@@ -339,10 +348,12 @@
   }
   .game-card-badge{
     position:absolute; top:10px; right:10px; z-index:2;
+    display:inline-flex; align-items:center; gap:4px;
     background:var(--teal-950); color:var(--mustard); border:1px solid rgba(239,174,31,0.5);
     font-family:var(--font-mono); font-size:0.6rem; text-transform:uppercase; letter-spacing:0.04em;
     padding:3px 8px; border-radius:999px;
   }
+  .game-card-badge svg{width:10px; height:10px;}
   .game-card-tag{
     display:block; margin-top:10px; font-family:var(--font-mono); font-size:0.68rem; text-transform:uppercase;
     letter-spacing:0.06em; color:var(--accent); text-align:center;
@@ -354,6 +365,7 @@
     display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:1.3rem; z-index:3;
     transition:background 0.2s ease, border-color 0.2s ease;
   }
+  .carousel-btn svg{width:20px; height:20px;}
   .carousel-btn:hover{background:var(--orange); border-color:var(--orange);}
   .carousel-btn.prev{left:-10px;}
   .carousel-btn.next{right:-10px;}
@@ -384,8 +396,9 @@
   .info-row{display:flex; gap:16px; align-items:flex-start;}
   .info-ico{
     width:46px; height:46px; border-radius:13px; background:var(--teal-800); border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.2rem;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--mustard);
   }
+  .info-ico svg{width:21px; height:21px;}
   .info-row h4{font-size:1.02rem; color:var(--cream); margin-bottom:4px;}
   .info-row p, .info-row a{color:var(--cream-dim); font-size:0.95rem; line-height:1.55;}
   .info-row a.link{color:var(--mustard); font-weight:700;}
@@ -403,7 +416,9 @@
   .cover-note{
     margin-top:18px; font-size:0.86rem; color:var(--cream-dim); background:rgba(244,232,200,0.06);
     padding:14px 16px; border-radius:12px; border:1px solid var(--line);
+    display:flex; align-items:flex-start; gap:10px;
   }
+  .cover-note svg{width:18px; height:18px; flex-shrink:0; color:var(--mustard); margin-top:1px;}
 
   .map-frame{
     margin-top:26px; border-radius:20px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/10;

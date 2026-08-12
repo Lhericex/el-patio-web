@@ -13,12 +13,12 @@
   function closeMenu(){
     mobileMenu.classList.remove('open');
     navToggle.setAttribute('aria-expanded','false');
-    navToggle.textContent = '☰';
+    navToggle.classList.remove('is-open');
   }
   navToggle.addEventListener('click', ()=>{
     const isOpen = mobileMenu.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
-    navToggle.textContent = isOpen ? '✕' : '☰';
+    navToggle.classList.toggle('is-open', isOpen);
   });
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
   window.addEventListener('resize', ()=>{ if(window.innerWidth > 880) closeMenu(); });
