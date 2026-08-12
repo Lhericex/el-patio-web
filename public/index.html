@@ -27,6 +27,7 @@
       <a href="#nosotros">Nosotros</a>
       <a href="#experiencia">La experiencia</a>
       <a href="#juegos">Juegos</a>
+      <a href="#eventos">Eventos</a>
       <a href="#visitanos">Visítanos</a>
     </nav>
     <div class="nav-cta">
@@ -38,6 +39,7 @@
     <a href="#nosotros">Nosotros</a>
     <a href="#experiencia">La experiencia</a>
     <a href="#juegos">Juegos</a>
+    <a href="#eventos">Eventos</a>
     <a href="#visitanos">Visítanos</a>
   </nav>
 </header>
@@ -89,6 +91,17 @@
       <div class="fact-card"><span class="num">$5</span><span class="lbl">Cover por persona, cubre 3 horas de juego</span></div>
       <div class="fact-card"><span class="num">$1</span><span class="lbl">Por hora adicional si la partida se alarga</span></div>
       <div class="fact-card"><span class="num">1</span><span class="lbl">Bebida de cortesía incluida con tu entrada</span></div>
+    </div>
+
+    <div class="host-block reveal">
+      <div class="host-portrait" aria-hidden="true">
+        <img class="host-img host-img-a" src="assets/host-portrait.jpg" alt="">
+        <img class="host-img host-img-b" src="assets/host-action.jpg" alt="">
+      </div>
+      <div class="host-copy">
+        <span class="host-tag">Tu anfitrión en El Patio</span>
+        <p>Detrás de cada mesa hay alguien que te recibe, te explica las reglas del juego que elijas y se asegura de que la noche fluya.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -156,58 +169,46 @@
       <p>Desde partidas rápidas para romper el hielo hasta duelos de estrategia que se alargan hasta la última ficha. Este es solo un adelanto — pregúntanos por el catálogo completo al llegar.</p>
     </div>
 
-    <div class="game-cats">
-      <div class="cat-card c-party reveal">
-        <h3>Juegos Party</h3>
-        <span class="cat-sub">Para romper el hielo</span>
-        <div class="chip-row">
-          <span class="chip">Taco, Gato, Cabra, Queso, Pizza</span>
-          <span class="chip">Sushi Go Party</span>
-          <span class="chip">Piles</span>
-          <span class="chip">Mente Vacuna</span>
-          <span class="chip">Throw Throw Burrito</span>
-          <span class="chip">Flip Cup Frenzy</span>
-          <span class="chip">Flip 7</span>
-          <span class="chip">Mantis</span>
-        </div>
-      </div>
+    <div class="cat-legend reveal">
+      <span class="lg-party">Juegos Party</span>
+      <span class="lg-break">Rompe Amistades</span>
+      <span class="lg-strategy">Estrategia</span>
+      <span class="lg-kids">Para niños (o no tan niños)</span>
+    </div>
 
-      <div class="cat-card c-break reveal">
-        <h3>Rompe Amistades</h3>
-        <span class="cat-sub">Bajo tu propio riesgo</span>
-        <div class="chip-row">
-          <span class="chip">Troll by Trolly</span>
-          <span class="chip">Unstable Unicorns</span>
-          <span class="chip">Exploding Kittens</span>
-          <span class="chip">Virus</span>
-          <span class="chip">Virus 2</span>
-          <span class="chip">Polilla Tramposa</span>
-        </div>
-      </div>
+    <div class="games-carousel-wrap reveal">
+      <button class="carousel-btn prev" id="gamesPrev" aria-label="Juegos anteriores">‹</button>
+      <div class="games-carousel" id="gamesCarousel">
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/taco-gato-cabra-queso-pizza.jpg');"><span class="game-card-name">Taco, Gato, Cabra, Queso, Pizza</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/sushi-go-party.jpg');"><span class="game-card-name">Sushi Go Party</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/piles.jpg');"><span class="game-card-name">Piles</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/mente-vacuna.jpg');"><span class="game-card-name">Mente Vacuna</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/throw-throw-burrito.jpg');"><span class="game-card-name">Throw Throw Burrito</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/flip-cup-frenzy.jpg');"><span class="game-card-name">Flip Cup Frenzy</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/flip-7.jpg');"><span class="game-card-name">Flip 7</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('assets/games/mantis.jpg');"><span class="game-card-name">Mantis</span></div><span class="game-card-tag">Party</span></div>
 
-      <div class="cat-card c-strategy reveal">
-        <h3>Juegos de Estrategia</h3>
-        <span class="cat-sub">Para pensar cada jugada</span>
-        <div class="chip-row">
-          <span class="chip">Catan</span>
-          <span class="chip">Disney Villanous</span>
-          <span class="chip">Risk</span>
-          <span class="chip">Splendor</span>
-          <span class="chip">7 Wonders</span>
-          <span class="chip">7 Wonders Duel</span>
-          <span class="chip">Gatos de Schrödinger</span>
-        </div>
-      </div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('assets/games/troll-by-trolly.jpg');"><span class="game-card-name">Troll by Trolly</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('assets/games/unstable-unicorns.jpg');"><span class="game-card-name">Unstable Unicorns</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('assets/games/exploding-kittens.jpg');"><span class="game-card-name">Exploding Kittens</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('assets/games/virus.jpg');"><span class="game-card-name">Virus</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('assets/games/virus-2.jpg');"><span class="game-card-name">Virus 2</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('assets/games/polilla-tramposa.jpg');"><span class="game-card-name">Polilla Tramposa</span></div><span class="game-card-tag">Rompe Amistades</span></div>
 
-      <div class="cat-card c-kids reveal">
-        <h3>Para niños (o no tan niños)</h3>
-        <span class="cat-sub">Diversión sin edad</span>
-        <div class="chip-row">
-          <span class="chip">Operando</span>
-          <span class="chip">Connect 4 Frenzy</span>
-          <span class="chip">Headbanz</span>
-        </div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/catan.jpg');"><span class="game-card-name">Catan</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/disney-villainous.jpg');"><span class="game-card-name">Disney Villainous</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/risk.jpg');"><span class="game-card-name">Risk</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/splendor.jpg');"><span class="game-card-name">Splendor</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/7-wonders.jpg');"><span class="game-card-name">7 Wonders</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/7-wonders-duel.jpg');"><span class="game-card-name">7 Wonders Duel</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/gatos-de-schrodinger.jpg');"><span class="game-card-name">Gatos de Schrödinger</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('assets/games/monopoly-got.jpg');"><span class="game-card-badge">★ Edición especial</span><span class="game-card-name">Monopoly: Game of Thrones</span></div><span class="game-card-tag">Estrategia</span></div>
+
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#6fd3c7; background-image:url('assets/games/operando.jpg');"><span class="game-card-name">Operando</span></div><span class="game-card-tag">Para niños</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#6fd3c7; background-image:url('assets/games/connect-4-frenzy.jpg');"><span class="game-card-name">Connect 4 Frenzy</span></div><span class="game-card-tag">Para niños</span></div>
+        <div class="game-card"><div class="game-card-art has-photo" style="--accent:#6fd3c7; background-image:url('assets/games/headbanz.jpg');"><span class="game-card-name">Headbanz</span></div><span class="game-card-tag">Para niños</span></div>
       </div>
+      <button class="carousel-btn next" id="gamesNext" aria-label="Más juegos">›</button>
     </div>
   </div>
 </section>
@@ -294,6 +295,36 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="events" id="eventos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Para empresas y grupos grandes</span>
+      <h2>También armamos tu evento privado.</h2>
+      <p>Cumpleaños, team building, lanzamientos — alquila El Patio para tu grupo y arma la dinámica a tu medida.</p>
+    </div>
+
+    <div class="event-cards">
+      <div class="event-card reveal">
+        <div class="event-ico">🎉</div>
+        <h3>Cumpleaños y celebraciones</h3>
+        <p>Reserva el espacio para tu grupo y elige los juegos de la noche.</p>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-ico">🏢</div>
+        <h3>Team building empresarial</h3>
+        <p>Dinámicas con juegos de mesa pensadas para romper el hielo entre equipos.</p>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-ico">🔒</div>
+        <h3>Alquiler exclusivo</h3>
+        <p>Todo El Patio para tu grupo, sin compartir espacio con otras mesas.</p>
+      </div>
+    </div>
+
+    <a class="btn btn-primary reveal" href="https://wa.me/584245695637?text=Hola%21%20Quiero%20cotizar%20un%20evento%20privado%20en%20El%20Patio%20%F0%9F%8E%89" target="_blank" rel="noopener">Cotiza tu evento →</a>
   </div>
 </section>
 

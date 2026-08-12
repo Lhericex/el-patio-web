@@ -22,3 +22,13 @@
   });
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
   window.addEventListener('resize', ()=>{ if(window.innerWidth > 880) closeMenu(); });
+
+  // games carousel
+  const gamesCarousel = document.getElementById('gamesCarousel');
+  const gamesPrev = document.getElementById('gamesPrev');
+  const gamesNext = document.getElementById('gamesNext');
+  if(gamesCarousel && gamesPrev && gamesNext){
+    const scrollStep = () => Math.min(gamesCarousel.clientWidth * 0.8, 600);
+    gamesPrev.addEventListener('click', ()=> gamesCarousel.scrollBy({left:-scrollStep(), behavior:'smooth'}));
+    gamesNext.addEventListener('click', ()=> gamesCarousel.scrollBy({left:scrollStep(), behavior:'smooth'}));
+  }
