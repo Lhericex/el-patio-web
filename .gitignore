@@ -2,3 +2,4 @@
 *.log
 node_modules/
 *.mp4
+!public/assets/host-video.mp4
