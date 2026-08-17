@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Juegos disponibles | El Patio — Barquisimeto"
+  description="Más de 40 juegos de mesa disponibles en El Patio: party, estrategia, para romper el hielo y para niños. Barquisimeto, Venezuela."
+>
+
+<section class="games" id="juegos" style="padding-top:140px;">
+  <div class="wrap">
+    <a href="/" class="back-link reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg> Volver al inicio</a>
+    <div class="page-head">
+      <div class="section-head reveal">
+        <span class="eyebrow">Nuestro catálogo</span>
+        <h1>Juegos para cada tipo de grupo.</h1>
+        <p>Desde partidas rápidas para romper el hielo hasta duelos de estrategia que se alargan hasta la última ficha. Este es solo un adelanto — pregúntanos por el catálogo completo al llegar.</p>
+      </div>
+      <div class="head-stage reveal" aria-hidden="true">
+        <div class="die die-hs-a"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+        <div class="die die-hs-b"><span class="pip"></span><span class="pip"></span></div>
+        <div class="emote-badge"><span class="brand-emote"><span class="bang">¡</span><span class="q">?</span></span></div>
+        <div class="pawns-badge">
+          <svg class="brand-pawn" viewBox="0 0 24 40" fill="currentColor" style="color:var(--mustard);"><circle cx="12" cy="9" r="7"/><path d="M6 20c0-2 2-3 2-3h8s2 1 2 3l3 17H3z"/></svg>
+          <svg class="brand-pawn" viewBox="0 0 24 40" fill="currentColor" style="color:var(--magenta);"><circle cx="12" cy="9" r="7"/><path d="M6 20c0-2 2-3 2-3h8s2 1 2 3l3 17H3z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="games-toolbar reveal">
+      <div class="games-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        <input type="text" id="gamesSearch" placeholder="Busca un juego por nombre...">
+      </div>
+      <div class="cat-legend" id="catFilters">
+        <button class="lg-party is-active" data-filter="all">Todos</button>
+        <button class="lg-party" data-filter="Party">Juegos Party</button>
+        <button class="lg-break" data-filter="Rompe Amistades">Rompe Amistades</button>
+        <button class="lg-strategy" data-filter="Estrategia">Estrategia</button>
+        <button class="lg-kids" data-filter="Para niños">Para niños (o no tan niños)</button>
+      </div>
+    </div>
+    <p class="games-hint reveal">Toca cualquier juego para ver sus reglas.</p>
+    <p class="games-empty" id="gamesEmpty" hidden>No encontramos ningún juego con ese nombre — pregúntanos, seguro lo tenemos igual.</p>
+
+    <div class="games-carousel-wrap reveal">
+      <div class="games-carousel" id="gamesCarousel">
+        <div class="game-card" data-name="Taco, Gato, Cabra, Queso, Pizza" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/taco-gato-cabra-queso-pizza.jpg');" role="img" aria-label="Taco, Gato, Cabra, Queso, Pizza"><span class="game-card-name">Taco, Gato, Cabra, Queso, Pizza</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card" data-name="Sushi Go Party" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/sushi-go-party.jpg');" role="img" aria-label="Sushi Go Party"><span class="game-card-name">Sushi Go Party</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card" data-name="UNO" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/uno.jpg');" role="img" aria-label="UNO"><span class="game-card-name">UNO</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card" data-name="Mente Vacuna" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/mente-vacuna.jpg');" role="img" aria-label="Mente Vacuna"><span class="game-card-name">Mente Vacuna</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card" data-name="Throw Throw Burrito" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/throw-throw-burrito.jpg');" role="img" aria-label="Throw Throw Burrito"><span class="game-card-name">Throw Throw Burrito</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card" data-name="Flip Cup Frenzy" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/flip-cup-frenzy.jpg');" role="img" aria-label="Flip Cup Frenzy"><span class="game-card-name">Flip Cup Frenzy</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card" data-name="Flip 7" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/flip-7.jpg');" role="img" aria-label="Flip 7"><span class="game-card-name">Flip 7</span></div><span class="game-card-tag">Party</span></div>
+        <div class="game-card" data-name="Mantis" data-cat="Party"><div class="game-card-art has-photo" style="--accent:#e8622c; background-image:url('/assets/games/mantis.jpg');" role="img" aria-label="Mantis"><span class="game-card-name">Mantis</span></div><span class="game-card-tag">Party</span></div>
+
+        <div class="game-card" data-name="Troll by Trolly" data-cat="Rompe Amistades"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('/assets/games/troll-by-trolly.jpg');" role="img" aria-label="Troll by Trolly"><span class="game-card-name">Troll by Trolly</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card" data-name="Unstable Unicorns" data-cat="Rompe Amistades"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('/assets/games/unstable-unicorns.jpg');" role="img" aria-label="Unstable Unicorns"><span class="game-card-name">Unstable Unicorns</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card" data-name="Exploding Kittens" data-cat="Rompe Amistades"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('/assets/games/exploding-kittens.jpg');" role="img" aria-label="Exploding Kittens"><span class="game-card-name">Exploding Kittens</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card" data-name="Virus" data-cat="Rompe Amistades"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('/assets/games/virus.jpg');" role="img" aria-label="Virus"><span class="game-card-name">Virus</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card" data-name="Virus 2" data-cat="Rompe Amistades"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('/assets/games/virus-2.jpg');" role="img" aria-label="Virus 2"><span class="game-card-name">Virus 2</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+        <div class="game-card" data-name="Polilla Tramposa" data-cat="Rompe Amistades"><div class="game-card-art has-photo" style="--accent:#ff7a52; background-image:url('/assets/games/polilla-tramposa.jpg');" role="img" aria-label="Polilla Tramposa"><span class="game-card-name">Polilla Tramposa</span></div><span class="game-card-tag">Rompe Amistades</span></div>
+
+        <div class="game-card" data-name="Catan" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/catan.jpg');" role="img" aria-label="Catan"><span class="game-card-name">Catan</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card" data-name="Disney Villainous" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/disney-villainous.jpg');" role="img" aria-label="Disney Villainous"><span class="game-card-name">Disney Villainous</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card" data-name="Risk" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/risk.jpg');" role="img" aria-label="Risk"><span class="game-card-name">Risk</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card" data-name="Splendor" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/splendor.jpg');" role="img" aria-label="Splendor"><span class="game-card-name">Splendor</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card" data-name="7 Wonders" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/7-wonders.jpg');" role="img" aria-label="7 Wonders"><span class="game-card-name">7 Wonders</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card" data-name="7 Wonders Duel" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/7-wonders-duel.jpg');" role="img" aria-label="7 Wonders Duel"><span class="game-card-name">7 Wonders Duel</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card" data-name="Gatos de Schrödinger" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/gatos-de-schrodinger.jpg');" role="img" aria-label="Gatos de Schrödinger"><span class="game-card-name">Gatos de Schrödinger</span></div><span class="game-card-tag">Estrategia</span></div>
+        <div class="game-card" data-name="Monopoly: Game of Thrones" data-cat="Estrategia"><div class="game-card-art has-photo" style="--accent:#efae1f; background-image:url('/assets/games/monopoly-got.jpg');" role="img" aria-label="Monopoly: Game of Thrones"><span class="game-card-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg> Edición especial</span><span class="game-card-name">Monopoly: Game of Thrones</span></div><span class="game-card-tag">Estrategia</span></div>
+
+        <div class="game-card" data-name="Operando" data-cat="Para niños"><div class="game-card-art has-photo" style="--accent:#6fd3c7; background-image:url('/assets/games/operando.jpg');" role="img" aria-label="Operando"><span class="game-card-name">Operando</span></div><span class="game-card-tag">Para niños</span></div>
+        <div class="game-card" data-name="Connect 4 Frenzy" data-cat="Para niños"><div class="game-card-art has-photo" style="--accent:#6fd3c7; background-image:url('/assets/games/connect-4-frenzy.jpg');" role="img" aria-label="Connect 4 Frenzy"><span class="game-card-name">Connect 4 Frenzy</span></div><span class="game-card-tag">Para niños</span></div>
+        <div class="game-card" data-name="Headbanz" data-cat="Para niños"><div class="game-card-art has-photo" style="--accent:#6fd3c7; background-image:url('/assets/games/headbanz.jpg');" role="img" aria-label="Headbanz"><span class="game-card-name">Headbanz</span></div><span class="game-card-tag">Para niños</span></div>
+      </div>
+    </div>
+    <div class="pager" id="gamesPager"></div>
+  </div>
+
+  <div class="rules-modal" id="rulesModal" aria-hidden="true">
+    <div class="rules-modal-backdrop" id="rulesModalBackdrop"></div>
+    <div class="rules-modal-card" role="dialog" aria-modal="true" aria-labelledby="rulesModalName">
+      <button class="rules-modal-close" id="rulesModalClose" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <span class="rules-modal-tag" id="rulesModalTag"></span>
+      <h3 id="rulesModalName"></h3>
+      <p id="rulesModalText"></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const rules: Record<string, string> = {
+    "Taco, Gato, Cabra, Queso, Pizza": "Van diciendo en voz alta \"Taco, Gato, Cabra, Queso, Pizza\" mientras ponen cartas boca arriba, una palabra por carta. Si la carta coincide con la palabra dicha en ese momento, ¡todos tocan el centro de la pila! El último en tocar se lleva todas las cartas jugadas. Gana quien se quede sin cartas primero.",
+    "Sushi Go Party": "Cada ronda elige una carta de tu mano y pasa el resto a quien tienes al lado. Vas armando combos de platillos de sushi que valen puntos según lo que hayas coleccionado. Tras varias rondas, gana quien más puntos acumule.",
+    "UNO": "Descarta cartas que coincidan en color o número con la última jugada. Usa las cartas especiales (+2, reversa, salta turno, comodín) para complicarle la partida a los demás. Grita \"¡UNO!\" cuando te quede una sola carta o pagas penalización. Gana quien se quede sin cartas.",
+    "Mente Vacuna": "Pregúntale a tu anfitrión — este es uno de esos juegos que se disfrutan mejor explicados en persona, en la mesa.",
+    "Throw Throw Burrito": "Es un juego de cartas rápido: mientras juegas para completar combos, ciertas cartas especiales activan que se lancen los burritos de peluche entre los jugadores. Gana quien complete su combo primero (¡y sobreviva a los burritazos!).",
+    "Flip Cup Frenzy": "Pregúntale a tu anfitrión — este es uno de esos juegos que se disfrutan mejor explicados en persona, en la mesa.",
+    "Flip 7": "Vas \"robando\" cartas numéricas sin repetir número. Si llegas a 7 números distintos ganas un bonus, pero si repites un número, pierdes los puntos de la ronda. Gestiona el riesgo: ¿sigues robando o te plantas?",
+    "Mantis": "Pregúntale a tu anfitrión — este es uno de esos juegos que se disfrutan mejor explicados en persona, en la mesa.",
+    "Troll by Trolly": "Pregúntale a tu anfitrión — este es uno de esos juegos que se disfrutan mejor explicados en persona, en la mesa.",
+    "Unstable Unicorns": "Juego de cartas de construcción de establo: coloca unicornios y usa cartas mágicas para ayudarte o sabotear a los demás. Gana el primer jugador en reunir 7 unicornios en su establo.",
+    "Exploding Kittens": "Roba cartas por turnos; si sacas un gato explosivo, quedas eliminado a menos que tengas una carta para desactivarlo. Usa cartas especiales para espiar, robar o saltarte tu turno de robar. El último jugador en pie gana.",
+    "Virus": "Una versión de cartas del cuerpo humano: infecta los órganos de tus rivales con virus mientras proteges los tuyos con vacunas. El primero en tener 4 órganos sanos o inmunizados gana.",
+    "Virus 2": "La segunda edición de Virus, con nuevas cartas y mecánicas (órganos especiales, eventos). Mismo objetivo: cura tus órganos e infecta los de tus rivales.",
+    "Polilla Tramposa": "Pregúntale a tu anfitrión — este es uno de esos juegos que se disfrutan mejor explicados en persona, en la mesa.",
+    "Catan": "Construye asentamientos, ciudades y caminos usando los recursos que consigues según los dados. Comercia con otros jugadores para conseguir lo que te falta. Gana el primero en llegar a 10 puntos de victoria.",
+    "Disney Villainous": "Cada jugador controla a un villano Disney distinto, con su propio tablero y objetivo único. Gana el primer jugador en cumplir la meta específica de su personaje.",
+    "Risk": "Juego de estrategia y conquista territorial: mueve ejércitos, ataca territorios rivales con dados, y controla continentes para ganar refuerzos. Gana quien cumpla el objetivo de conquista.",
+    "Splendor": "Compra fichas de gemas para adquirir cartas de desarrollo que dan bonificaciones permanentes y puntos. Atrae nobles con tus colecciones. Gana el primero en llegar a 15 puntos de prestigio.",
+    "7 Wonders": "Desarrolla una civilización antigua construyendo edificios y maravillas a lo largo de 3 eras, eligiendo cartas que van pasando de mano en mano. Gana quien sume más puntos combinando ciencia, comercio, milicia y cultura.",
+    "7 Wonders Duel": "La versión para 2 jugadores de 7 Wonders, con un tablero central de cartas en cascada. Puedes ganar por puntos, por supremacía militar o completando suficientes tecnologías científicas.",
+    "Gatos de Schrödinger": "Pregúntale a tu anfitrión — este es uno de esos juegos que se disfrutan mejor explicados en persona, en la mesa.",
+    "Monopoly: Game of Thrones": "Las reglas clásicas de Monopoly — compra propiedades, cobra renta a quien caiga en ellas, evita la bancarrota — con las casas de Game of Thrones en vez de calles. Gana el último jugador que quede solvente.",
+    "Operando": "Con las pinzas, extrae las \"piezas\" del paciente sin tocar los bordes metálicos. Si tocas, suena la alarma y pierdes el turno. Gana quien extraiga más piezas.",
+    "Connect 4 Frenzy": "Versión rápida del clásico 4 en línea: conecta 4 fichas de tu color en fila (horizontal, vertical o diagonal) antes que tu rival.",
+    "Headbanz": "Cada jugador lleva una diadema con una tarjeta (animal, objeto, etc.) que no puede ver, y hace preguntas de sí o no a los demás para adivinar qué es antes de que se acabe el tiempo.",
+  };
+
+  const modal = document.getElementById('rulesModal')!;
+  const modalName = document.getElementById('rulesModalName')!;
+  const modalTag = document.getElementById('rulesModalTag')!;
+  const modalText = document.getElementById('rulesModalText')!;
+  const cards = document.querySelectorAll<HTMLElement>('.game-card');
+
+  function openModal(name: string, cat: string){
+    modalName.textContent = name;
+    modalTag.textContent = cat;
+    modalText.textContent = rules[name] || "Pregúntale a tu anfitrión — te explica las reglas apenas llegues a la mesa.";
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      openModal(card.dataset.name || '', card.dataset.cat || '');
+    });
+  });
+  document.getElementById('rulesModalClose')?.addEventListener('click', closeModal);
+  document.getElementById('rulesModalBackdrop')?.addEventListener('click', closeModal);
+  window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+
+  // search + category filter
+  const searchInput = document.getElementById('gamesSearch') as HTMLInputElement | null;
+  const filterButtons = document.querySelectorAll<HTMLElement>('#catFilters [data-filter]');
+  const emptyState = document.getElementById('gamesEmpty');
+  const pager = document.getElementById('gamesPager');
+  const PAGE_SIZE = 12;
+  let activeFilter = 'all';
+  let currentPage = 1;
+
+  function normalize(s: string){
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function renderIcon(dir: 'prev' | 'next'){
+    const d = dir === 'prev' ? 'm15 18-6-6 6-6' : 'm9 18 6-6-6-6';
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+  }
+
+  function applyFilters(){
+    const query = normalize(searchInput?.value || '');
+    const matched: HTMLElement[] = [];
+
+    cards.forEach(card => {
+      const name = normalize(card.dataset.name || '');
+      const cat = card.dataset.cat || '';
+      const matchesQuery = name.includes(query);
+      const matchesFilter = activeFilter === 'all' || cat === activeFilter;
+      if(matchesQuery && matchesFilter){ matched.push(card); } else { card.style.display = 'none'; }
+    });
+
+    if(emptyState) emptyState.hidden = matched.length !== 0;
+
+    const totalPages = Math.max(1, Math.ceil(matched.length / PAGE_SIZE));
+    currentPage = Math.min(currentPage, totalPages);
+
+    matched.forEach((card, i) => {
+      const onPage = Math.floor(i / PAGE_SIZE) + 1 === currentPage;
+      card.style.display = onPage ? '' : 'none';
+    });
+
+    if(!pager) return;
+    if(totalPages <= 1){ pager.innerHTML = ''; return; }
+
+    let html = `<button class="pager-btn" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''} aria-label="Página anterior">${renderIcon('prev')}</button>`;
+    for(let p = 1; p <= totalPages; p++){
+      html += `<button class="pager-btn${p === currentPage ? ' is-active' : ''}" data-page="${p}">${p}</button>`;
+    }
+    html += `<button class="pager-btn" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''} aria-label="Página siguiente">${renderIcon('next')}</button>`;
+    pager.innerHTML = html;
+
+    pager.querySelectorAll<HTMLElement>('[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if(btn.hasAttribute('disabled')) return;
+        currentPage = Number(btn.dataset.page);
+        applyFilters();
+        pager.scrollIntoView({block:'nearest'});
+      });
+    });
+  }
+
+  searchInput?.addEventListener('input', () => { currentPage = 1; applyFilters(); });
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      activeFilter = btn.dataset.filter || 'all';
+      currentPage = 1;
+      applyFilters();
+    });
+  });
+
+  applyFilters();
+</script>
+
+</Layout>

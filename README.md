@@ -1,36 +1,43 @@
-# El Patio — Landing Page
+# Astro Starter Kit: Minimal
 
-Landing de una página para El Patio, juegos de mesa & food en Barquisimeto, Venezuela.
-
-## Estructura
-
-```
-el-patio-web/
-├── Dockerfile
-├── public/            # todo lo que se sirve al navegador
-│   ├── index.html
-│   ├── css/styles.css
-│   ├── js/main.js
-│   └── assets/logo.jpg
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-## Desarrollo local
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-Abre `public/index.html` directamente en el navegador, o sirve la carpeta con cualquier servidor estático:
+## 🚀 Project Structure
 
-```bash
-npx serve public
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-## Docker
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-```bash
-docker build -t el-patio-landing .
-docker run -d --name el-patio -p 8081:80 --restart unless-stopped el-patio-landing
-```
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-El sitio queda disponible en `http://localhost:8081` y, para otros dispositivos en la misma red, en `http://<ip-local-del-host>:8081`.
+Any static assets, like images, can be placed in the `public/` directory.
 
-## Contacto
+## 🧞 Commands
 
-Reservas y contacto por WhatsApp: [wa.me/584245695637](https://wa.me/584245695637)
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

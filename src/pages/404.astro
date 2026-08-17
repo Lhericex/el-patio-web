@@ -1,0 +1,90 @@
+---
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada | El Patio</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-950:#0a2e2a; --teal-900:#0d3b36; --cream:#f4e8c8; --orange:#e8622c;
+    --font-display:'Baloo 2', system-ui, sans-serif; --font-body:'Manrope', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:var(--teal-900); color:var(--cream); font-family:var(--font-body); text-align:center; padding:24px;
+  }
+  h1{font-family:var(--font-display); font-size:clamp(4rem,12vw,7rem); color:var(--orange); line-height:1;}
+  p{font-size:1.1rem; color:#e4d6ae; margin:16px 0 28px; max-width:420px;}
+  a{
+    display:inline-flex; align-items:center; gap:8px; background:var(--orange); color:var(--cream);
+    font-weight:700; padding:12px 26px; border-radius:999px; text-decoration:none;
+  }
+  a:hover{ background:var(--cream); color:var(--teal-950); }
+
+  .card-break-stage{ position:relative; width:180px; height:230px; margin-bottom:8px; }
+  .card-half{
+    position:absolute; top:0; width:180px; height:230px;
+    background:var(--cream); box-shadow:0 18px 30px -12px rgba(0,0,0,.45);
+    display:flex; color:var(--teal-950); font-family:var(--font-display); font-weight:800;
+  }
+  .card-half .pip{
+    position:absolute; width:14px; height:14px; border-radius:50%; background:var(--orange);
+  }
+  .card-half.left{
+    left:0; border-radius:16px 0 0 16px;
+    clip-path:polygon(0% 0%, 56% 0%, 46% 14%, 62% 27%, 42% 42%, 60% 58%, 40% 73%, 57% 88%, 50% 100%, 0% 100%);
+    animation:breakLeft 900ms cubic-bezier(.2,.9,.3,1.2) both, wobbleLeft 3.2s ease-in-out 900ms infinite;
+  }
+  .card-half.left .pip:nth-child(1){ top:22px; left:22px; }
+  .card-half.left .pip:nth-child(2){ top:60px; left:44px; }
+  .card-half.right{
+    right:0; border-radius:0 16px 16px 0;
+    clip-path:polygon(56% 0%, 100% 0%, 100% 100%, 50% 100%, 57% 88%, 40% 73%, 60% 58%, 42% 42%, 62% 27%, 46% 14%);
+    animation:breakRight 900ms cubic-bezier(.2,.9,.3,1.2) both, wobbleRight 3.2s ease-in-out 900ms infinite;
+  }
+  .card-half.right .pip:nth-child(1){ bottom:22px; right:22px; }
+  .card-half.right .pip:nth-child(2){ bottom:60px; right:44px; }
+
+  @keyframes breakLeft{
+    0%{ transform:translate(0,-40px) rotate(0deg); opacity:0; }
+    55%{ opacity:1; }
+    100%{ transform:translate(-14px,6px) rotate(-9deg); opacity:1; }
+  }
+  @keyframes breakRight{
+    0%{ transform:translate(0,-40px) rotate(0deg); opacity:0; }
+    55%{ opacity:1; }
+    100%{ transform:translate(14px,6px) rotate(9deg); opacity:1; }
+  }
+  @keyframes wobbleLeft{
+    0%,100%{ transform:translate(-14px,6px) rotate(-9deg); }
+    50%{ transform:translate(-14px,0px) rotate(-11deg); }
+  }
+  @keyframes wobbleRight{
+    0%,100%{ transform:translate(14px,6px) rotate(9deg); }
+    50%{ transform:translate(14px,0px) rotate(11deg); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .card-half{ animation:none !important; }
+    .card-half.left{ transform:translate(-14px,6px) rotate(-9deg); }
+    .card-half.right{ transform:translate(14px,6px) rotate(9deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="card-break-stage" aria-hidden="true">
+    <div class="card-half left"><span class="pip"></span><span class="pip"></span></div>
+    <div class="card-half right"><span class="pip"></span><span class="pip"></span></div>
+  </div>
+  <h1>404</h1>
+  <p>Esta mesa no existe. La página que buscas no está aquí.</p>
+  <a href="/">Volver al inicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</body>
+</html>

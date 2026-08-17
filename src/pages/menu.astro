@@ -1,0 +1,422 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Menú | El Patio — Barquisimeto"
+  description="El menú de El Patio: hamburguesas, tequeños, bebidas y postres con nombres de tus juegos de mesa favoritos. Barquisimeto, Venezuela."
+>
+
+<section class="menu" id="menu" style="padding-top:140px;">
+  <div class="wrap">
+    <a href="/" class="back-link reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg> Volver al inicio</a>
+    <div class="page-head">
+      <div class="section-head reveal">
+        <span class="eyebrow">El tablero principal</span>
+        <h1>Nuestro menú, jugado a nuestra manera.</h1>
+        <p>Cada plato tiene su propia mecánica. Precios en dólares, se acepta efectivo y pago móvil. Toca cualquier platillo para ver la foto en grande.</p>
+      </div>
+      <div class="head-stage reveal" aria-hidden="true">
+        <div class="die die-hs-a"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+        <div class="die die-hs-b"><span class="pip"></span><span class="pip"></span></div>
+        <div class="emote-badge"><span class="brand-emote"><span class="bang">¡</span><span class="q">?</span></span></div>
+        <div class="pawns-badge">
+          <svg class="brand-pawn" viewBox="0 0 24 40" fill="currentColor" style="color:var(--teal-700);"><circle cx="12" cy="9" r="7"/><path d="M6 20c0-2 2-3 2-3h8s2 1 2 3l3 17H3z"/></svg>
+          <svg class="brand-pawn" viewBox="0 0 24 40" fill="currentColor" style="color:var(--orange);"><circle cx="12" cy="9" r="7"/><path d="M6 20c0-2 2-3 2-3h8s2 1 2 3l3 17H3z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="games-toolbar reveal">
+      <div class="games-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        <input type="text" id="menuSearch" placeholder="Busca un platillo...">
+      </div>
+      <div class="cat-legend" id="menuFilters">
+        <button class="lg-party is-active" data-filter="all">Todos</button>
+        <button class="lg-party" data-filter="Fuertes">Fuertes</button>
+        <button class="lg-break" data-filter="Entradas">Entradas</button>
+        <button class="lg-strategy" data-filter="Bebidas">Bebidas</button>
+        <button class="lg-kids" data-filter="Postres">Postres</button>
+      </div>
+    </div>
+    <p class="games-empty" id="menuEmpty" hidden>No encontramos ningún platillo con ese nombre — pregúntale a tu anfitrión.</p>
+
+    <div class="menu-grid">
+      <div class="menu-cat-block reveal" data-cat="Fuertes">
+        <h3 class="menu-group-title">Fuertes</h3>
+        <div class="menu-carousel-wrap">
+          <button class="carousel-btn prev" data-dir="prev" aria-label="Anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="menu-cards-carousel">
+          <div class="menu-card" data-name="La Mente Vacuna" data-cat="Fuertes">
+            <div class="menu-card-art" style="--accent:#e8622c;">
+              <img src="https://images.unsplash.com/photo-1667329829058-ac191ba4a905?w=500&q=75&auto=format&fit=crop" alt="La Mente Vacuna" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$7</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">La Mente Vacuna</span>
+              <p class="menu-card-desc">Hamburguesa de carne (125gr). Acompañada de papas fritas. "Puedes pensar como el rebaño, o comerte al rebaño".</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="La Crispy Player" data-cat="Fuertes">
+            <div class="menu-card-art" style="--accent:#e8622c;">
+              <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?w=500&q=75&auto=format&fit=crop" alt="La Crispy Player" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$7</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">La Crispy Player</span>
+              <p class="menu-card-desc">Hamburguesa de pollo (125gr). Acompañada de papas fritas. Ideal para el jugador principiante que no quiere arriesgar en su estrategia.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="La Risk" data-cat="Fuertes">
+            <div class="menu-card-art" style="--accent:#e8622c;">
+              <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b?w=500&q=75&auto=format&fit=crop" alt="La Risk" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$10</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">La Risk</span>
+              <p class="menu-card-desc">Hamburguesa mixta (250gr). Para los que quieren conquistar todo el imperio proteico.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="La Mesa de Avalon" data-cat="Fuertes">
+            <div class="menu-card-art" style="--accent:#e8622c;">
+              <img src="https://images.unsplash.com/photo-1606131731446-5568d87113aa?w=500&q=75&auto=format&fit=crop" alt="La Mesa de Avalon" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$20</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">La Mesa de Avalon</span><span class="menu-card-tag">Bandeja familiar</span>
+              <p class="menu-card-desc">Tequeños, pastelitos y nuggets. Una alianza épica de todos los snacks, para compartir con las damas y caballeros del reino.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Hot Dog Splendor" data-cat="Fuertes">
+            <div class="menu-card-art" style="--accent:#e8622c;">
+              <img src="https://images.unsplash.com/photo-1615996001375-c7ef13294436?w=500&q=75&auto=format&fit=crop" alt="Hot Dog Splendor" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$2.5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Hot Dog Splendor</span>
+              <p class="menu-card-desc">La joyita de la casa — como en el juego, vas a querer más de uno.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Catan Steaks" data-cat="Fuertes">
+            <div class="menu-card-art" style="--accent:#e8622c;">
+              <img src="https://images.unsplash.com/photo-1602192103300-47e66756152e?w=500&q=75&auto=format&fit=crop" alt="Catan Steaks" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$8</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Catan Steaks</span><span class="menu-card-tag">Tiras de pollo</span>
+              <p class="menu-card-desc">8 unidades acompañadas de papas fritas. Como la madera de Catan, todos las quieren.</p>
+            </div>
+          </div>
+          </div>
+          <button class="carousel-btn next" data-dir="next" aria-label="Siguientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <div class="menu-cat-block reveal" data-cat="Entradas">
+        <h3 class="menu-group-title">Entradas</h3>
+        <div class="menu-carousel-wrap">
+          <button class="carousel-btn prev" data-dir="prev" aria-label="Anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="menu-cards-carousel">
+          <div class="menu-card" data-name="Torre de Jenga" data-cat="Entradas">
+            <div class="menu-card-art" style="--accent:#ff7a52;">
+              <img src="https://images.unsplash.com/photo-1623653387945-2fd25214f8fc?w=500&q=75&auto=format&fit=crop" alt="Torre de Jenga" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Torre de Jenga</span><span class="menu-card-tag">Tequeños</span>
+              <p class="menu-card-desc">¡Cuidado al sacar uno! Si se cae la salsa, pierdes. Disponible de 6 y 10 unidades.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Azulejos de Sabor" data-cat="Entradas">
+            <div class="menu-card-art" style="--accent:#ff7a52;">
+              <img src="https://images.unsplash.com/photo-1594254916028-742dedb72062?w=500&q=75&auto=format&fit=crop" alt="Azulejos de Sabor" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$3</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Azulejos de Sabor</span><span class="menu-card-tag">Pastelitos</span>
+              <p class="menu-card-desc">Piezas artesanales rellenas de gloria.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Mantis Bites" data-cat="Entradas">
+            <div class="menu-card-art" style="--accent:#ff7a52;">
+              <img src="https://images.unsplash.com/photo-1762631885089-87c72596dd70?w=500&q=75&auto=format&fit=crop" alt="Mantis Bites" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Mantis Bites</span><span class="menu-card-tag">Nuggets</span>
+              <p class="menu-card-desc">Aplica la de Mantis — ¡róbatelos antes de que se acaben!</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Exploding Popcorn" data-cat="Entradas">
+            <div class="menu-card-art" style="--accent:#ff7a52;">
+              <img src="https://images.unsplash.com/photo-1762631934944-1607dfccfe6b?w=500&q=75&auto=format&fit=crop" alt="Exploding Popcorn" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$2.5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Exploding Popcorn</span><span class="menu-card-tag">Bonus</span>
+              <p class="menu-card-desc">No queremos que te exploten los gatitos, pero sí que se te exploten las cotufas.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Wild Card" data-cat="Entradas">
+            <div class="menu-card-art" style="--accent:#ff7a52;">
+              <img src="https://images.unsplash.com/photo-1734774924912-dcbb467f8599?w=500&q=75&auto=format&fit=crop" alt="Wild Card" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-badge">★ Regla especial</span>
+              <span class="menu-card-price">$7.5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Wild Card</span><span class="menu-card-tag">Gluten free</span>
+              <p class="menu-card-desc">El comodín de la casa, apto para todos.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="7 Wonders" data-cat="Entradas">
+            <div class="menu-card-art" style="--accent:#ff7a52;">
+              <img src="https://images.unsplash.com/photo-1760304396110-8dc2b644fd05?w=500&q=75&auto=format&fit=crop" alt="7 Wonders" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-badge">★ Regla especial</span>
+              <span class="menu-card-price">Consultar</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">7 Wonders</span><span class="menu-card-tag">Vegano</span>
+              <p class="menu-card-desc">Una de las maravillas naturales del mundo, en tu plato.</p>
+            </div>
+          </div>
+          </div>
+          <button class="carousel-btn next" data-dir="next" aria-label="Siguientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <div class="menu-cat-block reveal" data-cat="Bebidas">
+        <h3 class="menu-group-title">Bebidas</h3>
+        <div class="menu-carousel-wrap">
+          <button class="carousel-btn prev" data-dir="prev" aria-label="Anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="menu-cards-carousel">
+          <div class="menu-card" data-name="Poción de Claridad" data-cat="Bebidas">
+            <div class="menu-card-art" style="--accent:#efae1f;">
+              <img src="https://images.unsplash.com/photo-1640213505284-21352ee0d76b?w=500&q=75&auto=format&fit=crop" alt="Poción de Claridad" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$2.5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Poción de Claridad</span><span class="menu-card-tag">Lipton durazno o limón</span>
+              <p class="menu-card-desc">Para evitar el "Análisis-Parálisis".</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Néctar de la Cosecha" data-cat="Bebidas">
+            <div class="menu-card-art" style="--accent:#efae1f;">
+              <img src="https://images.unsplash.com/photo-1583577612013-4fecf7bf8f13?w=500&q=75&auto=format&fit=crop" alt="Néctar de la Cosecha" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$2</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Néctar de la Cosecha</span><span class="menu-card-tag">Jugos naturales</span>
+              <p class="menu-card-desc">Parchita, fresa, durazno o guanábana recién recolectados.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Burbujas de Azar" data-cat="Bebidas">
+            <div class="menu-card-art" style="--accent:#efae1f;">
+              <img src="https://images.unsplash.com/photo-1568657624422-1b8713e79461?w=500&q=75&auto=format&fit=crop" alt="Burbujas de Azar" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$1</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Burbujas de Azar</span><span class="menu-card-tag">Refrescos</span>
+              <p class="menu-card-desc">Todos los sabores para refrescar el turno.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Elixir de Vida" data-cat="Bebidas">
+            <div class="menu-card-art" style="--accent:#efae1f;">
+              <img src="https://images.unsplash.com/photo-1551198297-094dd136d3e9?w=500&q=75&auto=format&fit=crop" alt="Elixir de Vida" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$1</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Elixir de Vida</span><span class="menu-card-tag">Agua</span>
+              <p class="menu-card-desc">Esencial para sobrevivir a partidas de más de 3 horas.</p>
+            </div>
+          </div>
+          </div>
+          <button class="carousel-btn next" data-dir="next" aria-label="Siguientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <div class="menu-cat-block reveal" data-cat="Postres">
+        <h3 class="menu-group-title">Postres</h3>
+        <div class="menu-carousel-wrap">
+          <button class="carousel-btn prev" data-dir="prev" aria-label="Anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="menu-cards-carousel">
+          <div class="menu-card" data-name="Meeples" data-cat="Postres">
+            <div class="menu-card-art" style="--accent:#6fd3c7;">
+              <img src="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?w=500&q=75&auto=format&fit=crop" alt="Meeples" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$2</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Meeples</span><span class="menu-card-tag">Ponquesitos</span>
+              <p class="menu-card-desc">Piezas rellenas de sabor para ganar en la vida.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Combo de Sequence" data-cat="Postres">
+            <div class="menu-card-art" style="--accent:#6fd3c7;">
+              <img src="https://images.unsplash.com/photo-1602663491496-73f07481dbea?w=500&q=75&auto=format&fit=crop" alt="Combo de Sequence" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$3.5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Combo de Sequence</span><span class="menu-card-tag">Torta quesillo</span>
+              <p class="menu-card-desc">Una línea perfecta de sabor que asegura tu triunfo.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Tablero de Ajedrez" data-cat="Postres">
+            <div class="menu-card-art" style="--accent:#6fd3c7;">
+              <img src="https://images.unsplash.com/photo-1700448293876-07dca826c161?w=500&q=75&auto=format&fit=crop" alt="Tablero de Ajedrez" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$2.5</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Tablero de Ajedrez</span><span class="menu-card-tag">Torta marmoleada</span>
+              <p class="menu-card-desc">El equilibrio perfecto entre blanco y negro.</p>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Tablero Dixit" data-cat="Postres">
+            <div class="menu-card-art" style="--accent:#6fd3c7;">
+              <img src="https://images.unsplash.com/photo-1615735487485-e52b9af610c1?w=500&q=75&auto=format&fit=crop" alt="Tablero Dixit" loading="lazy">
+              <span class="menu-card-shade"></span>
+              <span class="menu-card-price">$3</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-card-name">Tablero Dixit</span><span class="menu-card-tag">Torta de naranja y arequipe</span>
+              <p class="menu-card-desc">El resultado de una buena imaginación.</p>
+            </div>
+          </div>
+          </div>
+          <button class="carousel-btn next" data-dir="next" aria-label="Siguientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-modal" id="imgModal" aria-hidden="true">
+    <div class="img-modal-backdrop" id="imgModalBackdrop"></div>
+    <div class="img-modal-card" role="dialog" aria-modal="true" aria-labelledby="imgModalName">
+      <div class="img-modal-media">
+        <img id="imgModalPhoto" src="" alt="">
+        <span class="img-modal-price" id="imgModalPrice"></span>
+        <button class="img-modal-close" id="imgModalClose" aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="img-modal-body">
+        <span class="img-modal-tag" id="imgModalTag"></span>
+        <h3 id="imgModalName"></h3>
+        <p id="imgModalDesc"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ---------- image modal ----------
+  const modal = document.getElementById('imgModal')!;
+  const modalPhoto = document.getElementById('imgModalPhoto') as HTMLImageElement;
+  const modalName = document.getElementById('imgModalName')!;
+  const modalTag = document.getElementById('imgModalTag')!;
+  const modalPrice = document.getElementById('imgModalPrice')!;
+  const modalDesc = document.getElementById('imgModalDesc')!;
+
+  function openModal(card: HTMLElement){
+    const img = card.querySelector('img');
+    const price = card.querySelector('.menu-card-price');
+    const desc = card.querySelector('.menu-card-desc');
+    modalPhoto.src = img?.getAttribute('src') || '';
+    modalPhoto.alt = card.dataset.name || '';
+    modalName.textContent = card.dataset.name || '';
+    modalTag.textContent = card.dataset.cat || '';
+    modalPrice.textContent = price?.textContent || '';
+    modalDesc.textContent = desc?.textContent || '';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+  document.getElementById('imgModalClose')?.addEventListener('click', closeModal);
+  document.getElementById('imgModalBackdrop')?.addEventListener('click', closeModal);
+  window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+
+  document.querySelectorAll<HTMLElement>('.menu-card').forEach(card => {
+    card.addEventListener('click', () => openModal(card));
+  });
+
+  // ---------- search + category filter ----------
+  const searchInput = document.getElementById('menuSearch') as HTMLInputElement | null;
+  const filterButtons = document.querySelectorAll<HTMLElement>('#menuFilters [data-filter]');
+  const emptyState = document.getElementById('menuEmpty');
+  const groups = document.querySelectorAll<HTMLElement>('.menu-cat-block');
+  let activeFilter = 'all';
+
+  function normalize(s: string){
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function applyFilters(){
+    const query = normalize(searchInput?.value || '');
+    let anyVisible = false;
+
+    groups.forEach(group => {
+      const cat = group.dataset.cat || '';
+      const groupMatchesFilter = activeFilter === 'all' || cat === activeFilter;
+      let groupHasVisibleItem = false;
+
+      group.querySelectorAll<HTMLElement>('.menu-card').forEach(card => {
+        const tag = card.querySelector('.menu-card-tag')?.textContent || '';
+        const desc = card.querySelector('.menu-card-desc')?.textContent || '';
+        const haystack = normalize(`${card.dataset.name || ''} ${tag} ${desc}`);
+        const show = groupMatchesFilter && haystack.includes(query);
+        card.style.display = show ? '' : 'none';
+        if(show) groupHasVisibleItem = true;
+      });
+
+      group.style.display = groupHasVisibleItem ? '' : 'none';
+      if(groupHasVisibleItem) anyVisible = true;
+    });
+
+    if(emptyState) emptyState.hidden = anyVisible;
+  }
+
+  searchInput?.addEventListener('input', applyFilters);
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      activeFilter = btn.dataset.filter || 'all';
+      applyFilters();
+    });
+  });
+
+  applyFilters();
+
+  // ---------- horizontal carousels (one per category) ----------
+  document.querySelectorAll<HTMLElement>('.menu-carousel-wrap').forEach(wrap => {
+    const track = wrap.querySelector<HTMLElement>('.menu-cards-carousel');
+    const prev = wrap.querySelector<HTMLElement>('[data-dir="prev"]');
+    const next = wrap.querySelector<HTMLElement>('[data-dir="next"]');
+    if(!track) return;
+    const step = () => Math.min(track.clientWidth * 0.8, 600);
+    prev?.addEventListener('click', () => track.scrollBy({left:-step(), behavior:'smooth'}));
+    next?.addEventListener('click', () => track.scrollBy({left:step(), behavior:'smooth'}));
+  });
+</script>
+
+</Layout>

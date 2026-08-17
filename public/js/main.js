@@ -7,6 +7,31 @@
   }, {threshold:0.14});
   els.forEach(el=>io.observe(el));
 
+  // dynamic header: always stays visible, just condenses into a floating pill past the top
+  const siteHeader = document.querySelector('header');
+  const getScrollY = () => window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  let isScrolled = false;
+  let ticking = false;
+
+  const SCROLLED_ON = 56;   // enter "scrolled" state past this
+  const SCROLLED_OFF = 24;  // exit below this — gap avoids flicker right at the edge
+
+  const updateHeader = () => {
+    const currentY = getScrollY();
+    if(!isScrolled && currentY > SCROLLED_ON) isScrolled = true;
+    else if(isScrolled && currentY < SCROLLED_OFF) isScrolled = false;
+    siteHeader.classList.toggle('header-scrolled', isScrolled);
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if(!ticking){
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+
   // mobile menu toggle
   const navToggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');

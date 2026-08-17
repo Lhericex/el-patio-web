@@ -1,0 +1,17 @@
+# El Patio
+
+> Café de juegos de mesa en Barquisimeto, Venezuela. Punto de encuentro para jugar, comer y desconectar de las pantallas.
+
+El Patio combina una biblioteca de más de 40 juegos de mesa con una carta de comida y bebidas pensada para acompañar partidas largas. Ofrece mesas para grupos, anfitriones que explican las reglas, y espacio para eventos privados (cumpleaños, team building, encuentros exclusivos).
+
+## Páginas
+
+- [Inicio](https://el-patio-web-gamma.vercel.app/): presentación del local, cómo funciona una visita, y vista previa del catálogo de juegos.
+- [Juegos](https://el-patio-web-gamma.vercel.app/juegos/): catálogo completo de juegos de mesa disponibles, con buscador, filtro por categoría y reglas resumidas de cada uno.
+- [Menú](https://el-patio-web-gamma.vercel.app/menu/): carta de comida y bebidas, con nombres inspirados en juegos de mesa, buscador y filtro por categoría.
+
+## Datos clave
+
+- Ubicación: Barquisimeto, Venezuela.
+- Contacto: WhatsApp (enlace en el sitio).
+- Modelo: cover por persona + consumo de menú; también disponible para eventos privados.
