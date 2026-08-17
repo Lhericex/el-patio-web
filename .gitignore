@@ -3,6 +3,8 @@
 node_modules/
 *.mp4
 !public/assets/host-video.mp4
+# build output
+dist/
 # generated types
 .astro/
 
