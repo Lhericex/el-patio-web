@@ -305,6 +305,12 @@
   .head-stage .die-hs-b .pip{background:var(--cream);}
   .head-stage .die-hs-b .pip:nth-child(1){top:24%; left:24%;}
   .head-stage .die-hs-b .pip:nth-child(2){bottom:24%; right:24%;}
+  .head-stage .food-icon{
+    position:absolute; border-radius:50%; background-size:cover; background-position:center;
+    box-shadow:0 24px 48px rgba(0,0,0,0.3), 0 0 0 4px var(--teal-900);
+  }
+  .head-stage .food-icon-a{width:150px; height:150px; top:6%; right:8%; transform:rotate(-6deg); animation:floaty 6.2s ease-in-out infinite;}
+  .head-stage .food-icon-b{width:80px; height:80px; top:2%; left:14%; transform:rotate(8deg); animation:floaty 5s ease-in-out infinite 0.4s;}
   .head-stage .emote-badge{
     position:absolute; bottom:12%; left:0; background:var(--teal-950); border-radius:18px; padding:9px 16px;
     box-shadow:0 14px 30px rgba(0,0,0,0.3); animation:emoteFloat 3.8s ease-in-out infinite 0.2s;
@@ -320,6 +326,8 @@
     .head-stage{height:150px; order:-1; margin-bottom:4px;}
     .head-stage .die-hs-a{width:96px; height:96px;}
     .head-stage .die-hs-b{width:42px; height:42px;}
+    .head-stage .food-icon-a{width:96px; height:96px;}
+    .head-stage .food-icon-b{width:52px; height:52px;}
     .head-stage .emote-badge{padding:7px 12px;}
     .head-stage .emote-badge .brand-emote{font-size:1.25rem;}
     .head-stage .pawns-badge .brand-pawn{width:9px; height:15px;}
