@@ -322,7 +322,7 @@
   }
   .head-stage .pawns-badge .brand-pawn{width:11px; height:18px;}
   @media (max-width:900px){
-    .page-head{grid-template-columns:1fr; gap:6px;}
+    .page-head{grid-template-columns:1fr; gap:6px; margin-bottom:28px;}
     .head-stage{height:150px; order:-1; margin-bottom:4px;}
     .head-stage .die-hs-a{width:96px; height:96px;}
     .head-stage .die-hs-b{width:42px; height:42px;}
